@@ -1,3 +1,10 @@
+
+
+
+
+
+git://git.kernel.org/pub/scm/linux/kernel/git/paulmck/perfbook.git
+
 http://www.facebook.com/careers/puzzles.php
 
 http://en.wikipedia.org/wiki/Sandy_Bridge_(microarchitecture)

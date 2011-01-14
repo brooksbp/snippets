@@ -1,11 +1,4 @@
-/*
- * mips.c
- *
- * Brian Brooks, 2010
- *
- * Implementation of small MIPS-like processor
- *
- */
+/* cpu.c */
 
 #include <stdio.h>
 #include <stdint.h>
@@ -31,9 +24,7 @@
 uint8_t mem[MEM_MAX_SIZE];
 
 
-/*
- * Registers
- */
+/* Registers */
 #define zero r[0]
 #define at   r[1]
 #define v0   r[2]

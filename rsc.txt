@@ -1,7 +1,16 @@
 
 
 
+http://vim.runpaint.org/toc/
 
+http://www.lrde.epita.fr/~adl/autotools.html
+
+http://www.nytimes.com/interactive/2011/01/02/business/20110102-metrics-graphic.html?ref=business
+
+tradeking.com
+
+How to value a MBP
+http://cam.ly/danesblog/2011/01/craigslist-arbitrage/
 
 git://git.kernel.org/pub/scm/linux/kernel/git/paulmck/perfbook.git
 

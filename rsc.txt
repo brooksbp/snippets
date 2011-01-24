@@ -1,6 +1,66 @@
 
 
 
+
+http://www.google.com/search?sourceid=chrome&ie=UTF-8&q=hennesey+and+milner
+
+http://www.tsurucapital.com/en/
+
+
+http://blog.hiremebecauseimsmart.com/post/2860511335/design-your-own-mfe
+
+
+
+http://stackoverflow.com/questions/448673/how-do-emulators-work-and-how-are-they-written/448689#448689
+
+http://okmij.org/ftp/
+http://lambda-the-ultimate.org/node/2926
+
+http://www.brics.dk/RS/03/33/BRICS-RS-03-33.pdf
+
+http://people.uleth.ca/~jonathan.seldin/CCL.pdf
+http://www.wolfengagen.mephi.ru/papers/Wolfengagen_CLP-2003(En).pdf
+
+http://lambda-the-ultimate.org/node/492#comment-36585
+
+http://news.ycombinator.com/item?id=2099001
+
+http://kswizz.com/post/2785664228/hacking-mac-apps
+
+http://software.intel.com/en-us/articles/
+
+study:
+http://www.viva64.com/en/l/
+
+http://mitpress.mit.edu/catalog/browse/type.asp?ttype=2
+
+trading firms CS:
+http://choppertrading.com/
+http://www.knight.com/
+http://www.hudson-trading.com/
+objective paradigm
+Tradeworx
+RGM Advisors
+DRW Trading Group
+new high-freq trading prog w/ no adv degre 75-95k in 1st yr plus bonus
+
+
+http://www.aduni.org/courses/theory/
+http://www.archive.org/details/arsdigita_08_theory_of_computation
+http://www.cs.virginia.edu/~evans/cs3102/
+http://www.cs.washington.edu/education/courses/csep501/09au/
+
+http://www-2.cs.cmu.edu/~mblum/research/pdf/grad.html
+
+http://news.ycombinator.com/item?id=2093095
+
+http://www.asymco.com/
+
+http://heavycoder.com/tutorials/lua_embed.php
+
+http://www.fpga4fun.com/10BASE-T0.html
+
+
 http://vim.runpaint.org/toc/
 
 http://www.lrde.epita.fr/~adl/autotools.html

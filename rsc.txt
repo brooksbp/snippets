@@ -1,6 +1,20 @@
 
+http://blog.hiremebecauseimsmart.com/post/2860511335/design-your-own-mfe
+http://blog.hiremebecauseimsmart.com/post/2860511335/design-your-own-mfe
+http://blog.hiremebecauseimsmart.com/post/2860511335/design-your-own-mfe
+
+book: Resource allocation problems : algorithmic approaches
+
+http://www.libcpu.org/wiki/Main_Page
+
+http://www.hn-books.com/
+
+http://news.ycombinator.com/item?id=2135489
 
 
+http://news.ycombinator.com/item?id=2134433
+
+http://quantlib.org/index.shtml
 
 http://www.google.com/search?sourceid=chrome&ie=UTF-8&q=hennesey+and+milner
 
@@ -15,6 +29,10 @@ http://stackoverflow.com/questions/448673/how-do-emulators-work-and-how-are-they
 
 http://okmij.org/ftp/
 http://lambda-the-ultimate.org/node/2926
+
+http://matt.might.net/articles/compiling-up-to-lambda-calculus/
+http://blogs.umass.edu/egottlie/2008/12/01/lambda-signatures-as-interfaces-or-abstract-superclasses/
+http://objectmix.com/functional/767685-lexical-closures-without-true-garbage-collection.html
 
 http://www.brics.dk/RS/03/33/BRICS-RS-03-33.pdf
 
@@ -68,6 +86,10 @@ http://www.lrde.epita.fr/~adl/autotools.html
 http://www.nytimes.com/interactive/2011/01/02/business/20110102-metrics-graphic.html?ref=business
 
 tradeking.com
+http://www.lightspeed.com/
+http://www.interactivebrokers.com/
+www.thinkorswim.com
+
 
 How to value a MBP
 http://cam.ly/danesblog/2011/01/craigslist-arbitrage/

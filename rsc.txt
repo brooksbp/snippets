@@ -1,5 +1,68 @@
 
 
+Call-by-name, call-by-value and the lambda-calculus
+http://homepages.inf.ed.ac.uk/gdp/publications/cbn_cbv_lambda.pdf
+
+The mechanical evaluation of expressions
+http://ropas.snu.ac.kr/lib/dock/La1964.pdf
+
+A Rational Deconstruction of Landin's SECD Machine
+http://www.brics.dk/RS/03/33/BRICS-RS-03-33.pdf
+
+Philip Wadler's papers
+http://homepages.inf.ed.ac.uk/wadler/papers/
+
+Typed Memory Management
+http://www.cs.princeton.edu/~dpw/papers/thesis.pdf
+Typed Memory Management in a Calculus of Capabilities
+http://www.eecs.harvard.edu/~greg/papers/capabilities.pdf
+
+Escape Analysis: Correctness Proof, Implementation and Experimental Results
+http://delivery.acm.org/10.1145/270000/268949/p25-blanchet.pdf?key1=268949&key2=4377077921&coll=DL&dl=ACM&CFID=8436701&CFTOKEN=11742205
+
+Control Operators, the SECD-Machine, and the lambda-calculus
+http://www.cs.indiana.edu/pub/techreports/TR197.pdf
+
+Towards a Theory of Type Structure
+http://scholar.google.com/scholar?cluster=6014047335949501660&hl=en&as_sdt=0,34
+
+A Tail-Recursive Machine with Stack Inspection
+http://www.ccs.neu.edu/scheme/pubs/cf-toplas04.pdf
+
+Felleisen on self-study
+http://lists.racket-lang.org/users/archive/2007-August/020306.html
+
+Lambda Calculi with Types
+http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.26.4391
+
+Proofs and Types
+
+Lectures on the Curry-Howard Isomorphism
+http://folli.loria.fr/cds/1999/library/pdf/curry-howard.pdf
+
+Introduction to Lambda Calculus
+ftp://ftp.cs.ru.nl/pub/CompMath.Found/lambda.pdf
+
+A Structural Approach to Operational Semantics
+http://research.nii.ac.jp/~ichiro/lecture/model2002/SOS.pdf
+
+
+Efficient, Verifiable Binary Sandboxing for a CISC Architecture
+http://publications.csail.mit.edu/lcs/pubs/pdf/MIT-LCS-TR-988.pdf
+
+Native Client: A Sandbox for Portable, Untrusted x86 Native Code
+http://src.chromium.org/viewvc/native_client/data/docs_tarball/nacl/googleclient/native_client/documentation/nacl_paper.pdf
+
+
+
+
+http://www.cs.utexas.edu/users/EWD/
+
+http://www.dedoimedo.com/computers/crash-book.html
+
+http://www.odesk.com/
+http://www.dropbox.com/jobs/challenges
+
 http://www.model-engine-plans.com/engineplans/combustion/howellvtwin.htm
 http://bbs.homeshopmachinist.net/showthread.php?t=20781
 

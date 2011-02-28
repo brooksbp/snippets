@@ -1,4 +1,15 @@
 
+http://readscheme.org/
+
+Principal type-schemes for functional programs
+http://ian-grant.net/hm/milner-damas.pdf
+
+http://www.ccs.neu.edu/home/will/Twobit/ultimate.html
+
+Pink Floyd - Animals
+
+reddit.com/r/compsci/comments/fonsv/best_siteswaysbooks_to_get_a_head_start_on_a_cs/
+
 
 Call-by-name, call-by-value and the lambda-calculus
 http://homepages.inf.ed.ac.uk/gdp/publications/cbn_cbv_lambda.pdf

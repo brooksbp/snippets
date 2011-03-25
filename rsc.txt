@@ -1,4 +1,92 @@
 
+
+
+
+
+
+
+
+http://tryhaskell.org/
+http://book.realworldhaskell.org/read/
+http://learnyouahaskell.com/chapters
+
+http://learnyousomeerlang.com/content
+
+
+http://news.ycombinator.com/item?id=2326502
+
+http://vimeo.com/user2191865
+
+http://www.cis.upenn.edu/~bcpierce/sf/toc.html
+
+
+http://duartes.org/gustavo/blog/category/internals
+
+http://ols.fedoraproject.org/OLS/Reprints-2008/camargos-reprint.pdf
+
+http://news.ycombinator.com/item?id=1880797
+
+http://en.wikipedia.org/wiki/Human_Planet
+
+
+http://rosettacode.org/wiki/Main_Page
+
+http://doc.pfsense.org/index.php/Main_Page
+
+http://www.howradical.com/
+www.slicehost.com
+www.linode.com
+
+http://www.cs.cmu.edu/~15150/lect.html
+
+
+http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf
+
+http://www.haskell.org/haskellwiki/DDC/FurtherReading
+http://www.cse.psu.edu/~hannan/papers.html
+
+
+REI Leatherman
+
+http://www.primermagazine.com/
+http://mylifescoop.com/featured-stories/2011/02/7-best-style-and-dress-sites-for-men.html
+http://www.mensjournal.com/everything-you-know-about-fitness-is-a-lie/print/
+
+members.vuru.co/index.php?r=site/login
+portfolio123.com
+
+
+http://buy.audiogon.com/cgia/fsb.pl?amps
+http://emotiva.com/xpa2.shtm
+http://www.bkcomp.com/products/amplifiers/?tx_ttproducts_pi1%5BbackPID%5D=14&tx_ttproducts_pi1%5Bproduct%5D=7&cHash=16c62a4be0
+http://www.parasound.com/nc/2250.php
+
+
+ian bratt tilera
+http://www.linkedin.com/in/ianbratt
+
+
+NoMachine NX (vnc alternative)
+http://www.techexams.net/forums/lpi-rhce-sair/40541-nice-remote-admin-tool-better-than-vnc-if-you-ask-me.html
+
+Logic and Mathematics
+http://www.math.psu.edu/simpson/papers/philmath.pdf
+
+Book of Proof
+http://www.people.vcu.edu/~rhammack/BookOfProof/index.html
+
+
+http://packetlife.net/library/
+
+http://www.bufferbloat.net/news
+
+http://www.reddit.com/r/networking/comments/b5wui/hi_rnetworking_what_is_the_best_way_to_optimize/
+http://www.reddit.com/r/networking/comments/ciqua/building_a_home_lab_for_ccna_study/
+http://www.reddit.com/r/networking/comments/d7b61/reddit_help_me_design_a_reliable_wifi_network_for/
+http://www.reddit.com/r/networking/comments/dar6d/does_anyone_make_a_prepackaged_server_rack_in_a/
+
+
+
 http://readscheme.org/
 
 Principal type-schemes for functional programs
@@ -190,7 +278,7 @@ http://www.facebook.com/careers/puzzles.php
 
 http://en.wikipedia.org/wiki/Sandy_Bridge_(microarchitecture)
 
-SSE Performance Programming (APPL)
+
 http://developer.apple.com/hardwaredrivers/ve/sse.html
 
 http://www.1024cores.net/
@@ -200,12 +288,12 @@ http://rosettacode.org/wiki/Main_Page?again
 
 http://www.smashingmagazine.com/2010/12/28/how-to-maintain-your-personal-brand-as-a-corporate-employee/
 
-MOS 6502
+
 http://www.6502.org/tools/emu/
 http://www.pagetable.com/?cat=12
 
-Wedding
+
 http://arbutusphotography.com/gallery/
 
-Elisp
+
 http://learn-elisp-for-emacs.org/

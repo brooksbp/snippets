@@ -6,6 +6,44 @@
 
 
 
+
+
+http://www.deskography.org/
+
+http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
+
+http://research.microsoft.com/en-us/people/simonpj/
+
+http://quant.ly/
+
+http://jlouisramblings.blogspot.com/2010/04/haskell-vs-erlang-for-bittorent-clients.html
+
+http://www.scsh.net/docu/html/man.html
+
+http://www.youtube.com/watch?v=NWSZ4c9yqW8
+
+LLVM
+http://www.gnu.org/software/lightning/manual/lightning.html
+http://repo.or.cz/w/luajit-2.0.git/tree/HEAD:/dynasm
+
+http://news.ycombinator.com/item?id=2393976
+
+
+http://www.kc.frb.org/PUBLICAT/SYMPOS/2005/pdf/Rajan.paper.0804.pdf
+http://w4.stern.nyu.edu/salomon/docs/crisis/Bubbles%20and%20Monetary%20%20Policy%20-%20Roubini.pdf
+http://www.washingtonpost.com/wp-dyn/content/article/2007/10/15/AR2007101501435.html
+http://reggiemiddleton.typepad.com/reggie_middletons_perpetu/files/mortgagensurers.pdf
+
+
+http://supertech.csail.mit.edu/cilk/
+
+http://kanak.kshetri.com/camping/?p=94
+
+http://sisc-scheme.org/sisc-online.php
+http://community.schemewiki.org/?sicp-solutions
+
+http://www.bigsmoke.us/readline/shortcuts
+
 http://tryhaskell.org/
 http://book.realworldhaskell.org/read/
 http://learnyouahaskell.com/chapters
@@ -76,6 +114,7 @@ Book of Proof
 http://www.people.vcu.edu/~rhammack/BookOfProof/index.html
 
 
+http://www.gns3.net/
 http://packetlife.net/library/
 
 http://www.bufferbloat.net/news

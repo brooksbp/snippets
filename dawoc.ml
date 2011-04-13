@@ -1,3 +1,4 @@
+(* http://caml.inria.fr/pub/docs/oreilly-book/ocaml-ora-book.pdf *)
 
 let rec fact n = if n<2 then 1 else n * fact(n-1) ;;
 

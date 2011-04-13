@@ -8,6 +8,50 @@
 
 
 
+
+
+
+
+***
+http://www.cs.cmu.edu/~rwh/theses/
+http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf
+http://www.cs.cmu.edu/~rwh/smlbook/book.pdf
+***
+
+http://www.businessweek.com/magazine/content/11_16/b4224045265660.htm
+
+http://www.academicproductivity.com/2008/how-to-complete-your-phd-or-any-large-project-hard-and-soft-deadlines-and-the-martini-method/
+http://www.academicproductivity.com/2007/parkinsons-law-and-productivity/
+http://news.ycombinator.com/item?id=2368131
+
+
+****
+http://blog.beyond-syntax.com/2011/03/diving-into-linux-networking-i/
+http://duartes.org/gustavo/blog/category/internals
+****
+
+http://www.cs.cmu.edu/~guyb/papers/B85.pdf
+
+http://www.informit.com/articles/printerfriendly.aspx?p=1609144
+
+http://restaurantrecipesbook.com/outback-steakhouse-ranch-dressing-recipe/
+
+http://matt.might.net/articles/cps-conversion/
+
+http://www.reddit.com/r/haskell/comments/cs54i/how_would_you_write_du_in_haskell/
+
+http://www.lighterra.com/papers/modernmicroprocessors/
+http://www.cleveralgorithms.com/
+
+
+http://sneezy.cs.nott.ac.uk/fplunch/weblog/?p=291
+http://math.andrej.com/2010/09/27/programming-with-effects-i-theory/
+
+http://www.drpaulcarter.com/pcasm/
+
+http://www.haskell.org/haskellwiki/Haskell
+
+
 http://www.deskography.org/
 
 http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki

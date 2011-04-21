@@ -335,3 +335,177 @@ lockers = Map.fromList
           ,(103,(Taken,"DFS@"))
           ]
 
+--data List a = Empty | Cons a (List a) deriving (Show, Read, Eq, Ord)
+--data List a = Empty | Cons {listHead :: a, listTail :: List a} deriving (Show, Read, Eq, Ord)
+
+--3 `Cons` (4 `Cons` (5 `Cons` Empty))
+
+--fixity declarations
+infixr 5 :-:
+data List a = Empty | a :-: (List a) deriving (Show, Read, Eq, Ord)
+
+infixr 5 .++
+(.++) :: List a -> List a -> List a
+Empty .++ ys = ys
+(x :-: xs) .++ ys = x :-: (xs .++ ys)
+-- let a = 3 :-: 4 :-: 5 :-: Empty
+-- let b = 9 :-: Empty
+-- a .++ b
+
+
+data Tree a = EmptyTree
+            | Node a (Tree a) (Tree a)
+            deriving (Show, Read, Eq)
+
+singleton :: a -> Tree a
+singleton x = Node x EmptyTree EmptyTree
+
+treeInsert :: (Ord a) => a -> Tree a -> Tree a
+treeInsert x EmptyTree = singleton x
+treeInsert x (Node a left right)
+  | x == a = Node x left right
+  | x < a  = Node a (treeInsert x left) right
+  | x > a  = Node a left (treeInsert x right)
+
+treeElem :: (Ord a) => a -> Tree a -> Bool
+treeElem x EmptyTree = False
+treeElem x (Node a left right)
+  | x == a = True
+  | x > a  = treeElem x right
+  | x < a  = treeElem x left
+
+-- let nums = [8,4,2,6,9,63,2,2,5,9]
+-- let numsTree = foldr treeInsert EmptyTree nums
+
+-- class Eq a where
+--   (==) :: a -> a -> Bool
+--   (/=) :: a -> a -> Bool
+--   x == y = not (x /= y)
+--   x /= y = not (x == y)
+
+data TrafficLight = Red | Yellow | Green
+
+instance Eq TrafficLight where
+  Red == Red = True
+  Yellow == Yellow = True
+  Green == Green = True
+  _ == _ = False
+
+instance Show TrafficLight where
+  show Red = "RED"
+  show Yellow = "YELLOW"
+  show Green = "GREEN"
+
+-- :info Maybe
+-- :info Eq
+
+class YesNo a where
+  yesno :: a -> Bool
+
+instance YesNo Int where
+  yesno 0 = False
+  yesno _ = True
+
+instance YesNo [a] where
+  yesno [] = False
+  yesno _ = True
+
+instance YesNo Bool where
+  yesno = id
+
+instance YesNo (Maybe a) where
+  yesno (Just _) = True
+  yesno Nothing = False
+
+instance YesNo (Tree a) where
+  yesno EmptyTree = False
+  yesno _ = True
+
+class MyFunctor f where
+  fmap :: (a -> b) -> f a -> f b
+
+--f is a type constructor.. looks something like f :: a -> a
+--fmap takes a function a -> b and a functor f applied to type a
+-- and returns a functor applied to a type b...
+
+-- *Main> :t map
+-- map :: (a -> b) -> [a] -> [b]
+--well shit this is a Functor []
+
+instance MyFunctor [] where
+  fmap = map
+
+-- *Main> :t []
+-- [] :: [a]
+
+instance MyFunctor Maybe where
+  fmap f (Just x) = Just (f x)
+  fmap f Nothing = Nothing
+
+-- Main.fmap (++ "INSIDE JUST") (Just "hi... ")
+-- Main.fmap (++ "INSIDE JUST") (Nothing)
+
+instance MyFunctor Tree where
+  fmap f EmptyTree = EmptyTree
+  fmap f (Node x a b) = Node (f x) (Main.fmap f a) (Main.fmap f b)
+
+-- *Main> Main.fmap (*2) EmptyTree
+-- EmptyTree
+-- *Main> Main.fmap (*2) (foldr treeInsert EmptyTree [3,8,5,2])
+-- Node 4 EmptyTree (Node 10 (Node 6 EmptyTree EmptyTree) (Node 16 EmptyTree EmptyTree))
+
+-- data Either a b = Left a | Right b
+instance MyFunctor (Either a) where
+  fmap f (Right x) = Right (f x)
+  fmap f (Left x) = Left x
+-- notice do not map over Left because it's not same type as b
+
+-- kind is like the type of a type...
+-- *Main> :k Int
+-- Int :: *
+
+-- * means the type is a concrete type
+
+-- *Main> :k Maybe
+-- Maybe :: * -> *
+-- *Main> :k Maybe Int
+-- Maybe Int :: *
+-- *Main> :k Either
+-- Either :: * -> * -> *
+-- *Main> :k Either String
+-- Either String :: * -> *
+-- *Main> :k Either String Int
+-- Either String Int :: *
+
+class Tofu t where
+  tofu :: j a -> t a j
+
+-- j a has to have kind *. we assume * for a, and infer j * -> *
+-- t must produce a concrete value so.. * -> (* -> *) -> *
+
+data Frank a b = Frank {frankField :: b a} deriving (Show)
+
+-- *Main> :t Frank {frankField = Just "HAHA"}
+-- Frank {frankField = Just "HAHA"} :: Frank [Char] Maybe
+-- *Main> :t Frank {frankField = Node 'a' EmptyTree EmptyTree}
+-- Frank {frankField = Node 'a' EmptyTree EmptyTree}
+--   :: Frank Char Tree
+-- *Main> :t Frank {frankField = "YES"}
+-- Frank {frankField = "YES"} :: Frank Char []
+
+instance Tofu Frank where
+  tofu x = Frank x
+
+-- *Main> tofu (Just 'a') :: Frank Char Maybe
+-- Frank {frankField = Just 'a'}
+-- *Main> tofu ["HELLO"] :: Frank [Char] []
+-- Frank {frankField = ["HELLO"]}
+
+data Barry t k p = Barry { yabba :: p, dabba :: t k }
+
+-- *Main> :k Barry
+-- Barry :: (* -> *) -> * -> * -> *
+
+instance MyFunctor (Barry a b) where
+  fmap f (Barry {yabba = x, dabba = y}) = Barry {yabba = f x, dabba = y}
+

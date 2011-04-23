@@ -1,3 +1,0 @@
-
-clean:
-	rm *.o *.hi

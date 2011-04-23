@@ -30,3 +30,12 @@
 -- main = do line <- fmap (intersperse '-' . reverse . map toUpper) getLine
 --           putStrLn line
 
+instance Functor ((->) r) where
+  fmap f g = (\x -> f (g x))
+
+{- fmap :: (a -> b) -> f a -> f b
+   fmap :: (a -> b) -> ((->) r a) -> ((->) r b)
+   fmap :: (a -> b) -> (r -> a) -> (r -> b)
+
+   takes a function from 'a' to 'b' and a function from 'r' to 'a' and returns
+   a function from 'r' to 'b'. this is like function composition.-}

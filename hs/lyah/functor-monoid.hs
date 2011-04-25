@@ -1,4 +1,5 @@
 import Control.Applicative
+import Data.Monoid
 
 {-functors are things that can be mapped over. described by Functor typeclass
   which only has one typeclass method fmap :: (a -> b) -> f a -> f b which
@@ -292,4 +293,75 @@ helloMe' (BetterBool _) = "hello"
 
 {- Monoids
 
-   
+   type classes give an interface for types that have some behavior in common.
+   e.g. Eq for types whose values can be equated, Functor, Applicative.
+
+   when we make a type we think about what behavior it supports aka what it can act like
+   think if there's already an existing type class
+
+   *, ++ [], [] ++
+   take 2 parameters, parameters & return have same type, there exists a value that doesn't change other values when evaluated.
+   when we have 3 or more values, use binary function to reduce to single result e.g. (3 * $) * 5  think about associativity
+
+   A monoid is when you have an associative binary function and a value which acts as an identity wrt that function. -}
+
+--import Data.Monoid
+-- class Monoid m where
+--   mempty :: m
+--   mappend :: m -> m -> m
+--   mconcat :: [m] -> m
+--   mconcat = foldr mappend mempty
+
+{- only concrete types can be made isntances of Monoid
+
+   mempty isn't really a function since it doesnt take parameters, it's a polymorphic constant
+   it's the identity of that monoid
+
+   mappend, the binary function
+   mconcat, takes a list of monoid values and reduces them to single value via mappend. default implementation takes mempty as starting value and folds list from right with mappend. can define if want to implement more efficiently
+
+   monoid rules:
+   mempty `mappend` x = x
+   x `mappend` mempty = x
+   (x `mappend` y) `mappend` z = x `mappend` (y `mappend` z)
+-}
+
+-- instance Monoid [a] where
+--   mempty = []
+--   mappend = (++)
+
+-- instance Monoid a => Monoid (Maybe a) where
+--   mempty = Nothing
+--   Nothing `mappend` m = m
+--   m `mappend` Nothing = m
+--   Just m1 `mappend` Just m2 = Just (m1 `mappend` m2)
+
+-- *Main> Nothing `mappend` Just "andy"
+-- Just "andy"
+-- *Main> Just LT `mappend` Nothing
+-- Just LT
+-- *Main> Just (Sum 3) `mappend` Just (Sum 4)
+-- Just (Sum {getSum = 7})
+
+-- newtype First a = First { getFirst :: Maybe a }
+--                 deriving (Eq, Ord, Read, Show)
+-- -- wrap Maybe a in a First.
+
+-- instance Monoid (First a) where
+--   mempty = First Nothing
+--   First (Just x) `mappend` _ = First (Just x)
+--   First Nothing `mappend` x = x
+
+-- *Main> getFirst $ First (Just 'a') `mappend` First (Just 'b')
+-- Just 'a'
+-- *Main> getFirst $ First Nothing `mappend` First (Just 'b')
+-- Just 'b'
+-- *Main> getFirst $ First (Just 'a') `mappend` First Nothing
+-- Just 'a'
+-- *Main> getFirst . mconcat . map First $ [Nothing, Just 9, Just 10]
+-- Just 9
+-- *Main> getLast . mconcat . map Last $ [Nothing, Just 9, Just 10]
+-- Just 10
+-- *Main> getLast $ Last (Just "one") `mappend` Last (Just "two")
+-- Just "two"
+

@@ -279,6 +279,17 @@ helloMe' (BetterBool _) = "hello"
 -- LAZIER...
 
 
-{-
+{- type keyword for making type synonyms
+   newtype keyword for taking existing types and wrapping in new types
+     easier to make instance of certain type classes
+     record syntax for newtype gets you functions for converting between the new type and original type
+   data keyword for making unrestricted data types.
 
-  type keywork for making type synonyms
+   1) if you want type signatures to look cleaner and be more descriptive, use type synonyms.
+   2) if you want to take an existing type and wrap it in a new type in order to make it
+      an instance of a type class, use newtype.
+   3) if you want to make something completely new, use data. -}
+
+{- Monoids
+
+   

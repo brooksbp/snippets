@@ -11,6 +11,21 @@
 
 
 
+http://meta.cstheory.stackexchange.com/questions/446/broadening-the-scope-of-questions#985
+http://cstheory.stackexchange.com/questions/944/solid-applications-of-category-theory-in-tcs
+
+http://www.logicinaction.org/
+
+
+http://research.microsoft.com/en-us/um/people/simonpj/papers/history-of-haskell/
+
+
+http://tbbuck.com/building-a-web-application-that-makes-500-a-month-part-i/
+
+http://news.ycombinator.com/item?id=2474175
+http://news.ycombinator.com/item?id=2473932
+
+http://www.ncga.state.nc.us/gascripts/Statutes/StatutesTOC.pl?Chapter=0042
 
 http://fabiensanglard.net/doomIphone/doomClassicRenderer.php
 

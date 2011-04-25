@@ -1,5 +1,6 @@
 import Control.Applicative
 import Data.Monoid
+import qualified Data.Foldable as F
 
 {-functors are things that can be mapped over. described by Functor typeclass
   which only has one typeclass method fmap :: (a -> b) -> f a -> f b which
@@ -364,4 +365,42 @@ helloMe' (BetterBool _) = "hello"
 -- Just 10
 -- *Main> getLast $ Last (Just "one") `mappend` Last (Just "two")
 -- Just "two"
+
+-- Functor is for things that can be mapped over, Foldable is for things that can be folded up
+
+-- *Main> :t foldr
+-- foldr :: (a -> b -> b) -> b -> [a] -> b
+-- *Main> :t F.foldr
+-- F.foldr :: F.Foldable t => (a -> b -> b) -> b -> t a -> b
+-- *Main> foldr (*) 1 [1,2,3]
+-- 6
+-- *Main> F.foldr (*) 1 [1,2,3]
+-- 6
+-- *Main> F.foldl (+) 2 (Just 9)
+-- 11
+-- *Main> F.foldr (||) False (Just True)
+-- True
+
+data Tree a = Empty
+            | Node a (Tree a) (Tree a)
+            deriving (Show, Read, Eq)
+
+-- *Main> :t F.foldMap
+-- F.foldMap :: (Monoid m, F.Foldable t) => (a -> m) -> t a -> m
+
+instance F.Foldable Tree where
+  foldMap f Empty = mempty
+  foldMap f (Node x l r) = F.foldMap f l `mappend`
+                           f x `mappend`
+                           F.foldMap f r
+
+-- F.foldl (+) 0 testTree
+-- F.foldl (*) 1 testTree
+
+-- is any number in tree equal to 3?
+-- getAny $ F.foldMap (\x -> Any $ x == 3) testTree
+-- True
+-- convert Tree into List
+-- F.foldMap (\x -> [x]) testTree
+-- [1,3,6,5,8,9,10]
 

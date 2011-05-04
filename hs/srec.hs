@@ -1,4 +1,4 @@
-{- Structural Recursion
+{- On Structural Recursion
 
    http://personal.cis.strath.ac.uk/~raa/posts/2011-04-22-structural-recursion.html -}
 
@@ -34,8 +34,8 @@ quicksort (x:xs) = quicksort l ++ quicksort (x:h)
    Use general purpose inductively defined type Acc which encodes recursion on
    arbitrary well-founded relations (Agda syntax): -}
 
-data Acc (x : A) : Set where
-  acc : (\/ y -> y < x -> Acc y
+-- data Acc (x : A) : Set where
+--  acc : (\/ y -> y < x -> Acc y
 
 {- Functions are defined by structural recursion on Acc x argument. Must provide
    proof that Acc x for chosen relation < and argument x.
@@ -65,3 +65,16 @@ data Acc (x : A) : Set where
    [2] http://personal.cis.strath.ac.uk/~patricia/csl2010.pdf
 
    ^ Next post on encoding structural recusion in type and category theory. -}
+
+{- On Structural Recurssion II: Folds and Induction
+
+   http://personal.cis.strath.ac.uk/~raa/posts/2011-04-28-folds-and-induction.html
+
+   Goal is create a self-contained, syntax-free definition of a dependently-typed
+   structural recursion principle for a type A. Start with normal structural
+   recursion over inductively defined types; later move to other types by
+   combining existing structural induction principles.
+
+   ^ reddit comments: only covering structural recursion/induction over
+     inductively defined types--types that arise as initial fixpoints of
+     F-algebra--not co-inductive types.

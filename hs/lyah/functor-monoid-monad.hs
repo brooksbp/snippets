@@ -404,3 +404,25 @@ instance F.Foldable Tree where
 -- F.foldMap (\x -> [x]) testTree
 -- [1,3,6,5,8,9,10]
 
+{- Monads
+
+   Functors are useful concept for values that can be mapped over. Applicative
+   functors allows viewing values of certain data types as values with contexts
+   and use normal functions on those values while preserving contexts..?
+
+   monads are beefed up applicative functors
+
+   fmap :: (Functor f) => (a -> b) -> f a -> f b
+
+   what if function is already wrapped inside a functor value? like if we had
+   Just (*3) and wanted to apply to Just 5 ?
+
+   (<*>) :: (Applicative f) => f (a -> b) -> f a -> f b
+
+   monads are concerned with: if you have a value with a context 'm a' how do you apply
+   a function to it that takes a normal 'a' and returns a value with a context? e.g. how
+   do you apply a function of type 'a -> m b' to a value of type 'm a'
+
+   (>>=) :: (Monad m) => m a -> (a -> m b) -> m b
+
+   -}

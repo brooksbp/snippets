@@ -78,3 +78,96 @@ quicksort (x:xs) = quicksort l ++ quicksort (x:h)
    ^ reddit comments: only covering structural recursion/induction over
      inductively defined types--types that arise as initial fixpoints of
      F-algebra--not co-inductive types.
+
+     
+   ^ Wikipedia: F-algebra
+     F-algebra is a structure defined according to a functor F. F-algebras can
+     be used to represent datastructures such as lists and trees.
+
+     An F-algebra for an endofunctor
+              F : C --> C
+     is an object A of C together with a C-morphism
+              \alpha : F A --> A
+     A homomorphism from F-algebra (A,\alpha) to F-algebra (B,\beta) is a
+     morphism
+              f : A --> B
+     in C such that
+              f o \alpha = \beta o F f
+
+
+                         \alpha
+                 F(A)  ---------->  A
+
+                  |                 |
+                  |                 |
+             F(f) |                 | f
+                  |                 |
+                  !                 !
+
+                 F(B)  ---------->  B
+                         \beta
+
+     Example - Consider the functor F : Set --> Set which takes a set x
+     and returns x+1. The set N of natural numbers together with the
+     function [zero,succ] : 1 + N --> N (which is the coproduct of
+     functions zero : 1 --> N, succ : N --> N (which sends integer n
+     to n+1)) is an F-algebra.
+
+   What is Structural Recursion?
+   In Coq or Agda a programmer enters a recursive definition and the system
+   validates whether it is an acceptable definition. An alternative is to
+   have the system proclaim acceptable definitions; use special-purpose
+   recursion combinators/schemes to write programs. Author interested in
+   dependent recursion schemes. First, the most basic recursion scheme...
+
+   Folds, Catamorphisms and F-Algebras
+   We present structural recursion on lists (
+        foldr : (B : Set) -> B -> (A -> B -> B) -> List -> B
+   which satisfies
+        foldr B n c nil         = n
+        foldr B n c (cons a as) = c a (foldr B c n as)
+   The well-known category-theoretic generalisation of this uses F-algebras.
+   Constructors of our inductive type are encoded as a functor
+        F : Set -> Set
+   Constructors of lists with elements from some set A
+        ListF : Set -> Set
+        ListF X = 1 + A x X
+   foldr B n can now be captured as
+        f : ListF B -> B
+   A pair of set B and such a function f : F B -> B is an F-algebra
+        (B,f)
+   Given two F-algebras
+        k  : F B -> B
+        k' : F C -> C
+   define morphisms to be functions
+        h : B -> C
+   such that
+        h o k = k' o F h
+   F-algebras and their morphisms form the F-Alg category. For most functors F,
+   F-Alg has an initial object (unique up-to isomorphism). Consider F-algebra
+        in : F G -> G
+   such that for any other F-algebra
+        k : F S -> S
+   there is a unique F-algebra morphism from -in- to -k-. For the list example,
+   an initial algebra for ListF is the set of lists with elements from the
+   set A, with
+        in : ListF (List A) -> List A)
+   defined as the construction of lists using nil and cons. If we have a
+   ListF-algebra
+        k : ListF S -> S
+   we get a function of type
+        List A -> B
+   Since it is a ListF-morphism it satisfies the two equations of foldr. Note
+        F X = (X -> 2) -> 2
+   does not have an initial algebra in the category of sets and functions. In
+   recursion schemes literature, folds are referred to as catamorphisms.
+
+   !!! Edward Kmett
+   http://knol.google.com/k/catamorphisms
+   http://comonad.com/reader/2009/recursion-schemes/
+
+   What is Structural Induction?
+   Structural induction is structural recursion with fancier types.
+   Dependent Structural Recursion (aka Structural Inductions)
+   In pure type theory (without pattern matching and recursive definitions),
+   structural recursion is presented in terms of elimination principles.

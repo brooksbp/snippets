@@ -24,6 +24,22 @@ bool binarySearch(T)(T[] input, T value)
     return false;
 }
 
+bool rBinarySearch(T)(T[] input, T value)
+{
+    if (input.empty)
+        return false;
+
+    auto i = input.length / 2;
+    auto mid = input[i];
+
+    if (mid > value)
+        return rBinarySearch(input[0 .. i]);
+    if (mid < value)
+        return rBinarySearch(input[i + 1 .. $]);
+
+    return true;
+}
+
 void main()
 {
     

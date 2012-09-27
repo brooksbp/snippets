@@ -50,4 +50,3 @@ syslog syslogh fac pri msg = sendstr sendmsg
         sendstr [] = return ()
         sendstr omsg = do sent <- sendTo (slSocket syslogh) omsg (slAddress syslogh)
                           sendstr (genericDrop sent omsg)
-

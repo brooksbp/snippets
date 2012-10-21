@@ -1,0 +1,1 @@
+#s((blog #(0 1)) "/home/brian/proj/rktweb/the-blog-data.db" (#s((post #(0 1 2)) "adsfasdf" "adfasdf" ()) #s((post #(0 1 2)) "Second Post" "This is another post" ()) #s((post #(0 1 2)) "First Post" "This is my first post" ("First comment!"))))

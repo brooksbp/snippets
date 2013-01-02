@@ -1,3 +1,6 @@
+// 1.1 Implement an algorithm to determine if a string has all unique
+// characters.  What if you cannot use additional data structures?
+
 #include <iostream>
 #include <string>
 #include <assert.h>
@@ -5,9 +8,6 @@
 #include <unordered_map>
 
 using namespace std;
-
-// 1.1 Implement an algorithm to determine if a string has all unique
-// characters.  What if you cannot use additional data structures?
 
 bool all_unique(string& str) {
   unordered_map<char,int> char_map;
@@ -44,20 +44,15 @@ int main(int argc, char *argv[]) {
   string empty("");
   string sc = s1 + s2 + empty;
 
-  assert(all_unique(s1));
-  assert(all_unique(s2));
-  assert(all_unique(empty));
-  assert(!all_unique(sc));
+#define RUN_ASSERTS(fn) do { \
+    assert(fn(s1));          \
+    assert(fn(s2));          \
+    assert(fn(empty));       \
+    assert(!fn(sc));         \
+  } while (0)
 
-  assert(all_unique2(s1));
-  assert(all_unique2(s2));
-  assert(all_unique2(empty));
-  assert(!all_unique2(sc));
-
-  assert(all_unique3(s1));
-  assert(all_unique3(s2));
-  assert(all_unique3(empty));
-  assert(!all_unique3(sc));
-
+  RUN_ASSERTS(all_unique);
+  RUN_ASSERTS(all_unique2);
+  RUN_ASSERTS(all_unique3);
   return 0;
 }

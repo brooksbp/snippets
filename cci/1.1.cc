@@ -9,9 +9,12 @@
 
 using namespace std;
 
+#define MAX_CHARS 256   // 8-bit ASCII
+
 bool all_unique(string& str) {
   unordered_map<char,int> char_map;
   string::iterator i;
+  if (str.length() > MAX_CHARS) return false;
   for (i = str.begin(); i < str.end(); i++) {
     char_map[*i] += 1;
     if (char_map[*i] > 1) return false;
@@ -21,6 +24,7 @@ bool all_unique(string& str) {
 
 bool all_unique2(string& str) {
   string::iterator i, j;
+  if (str.length() > MAX_CHARS) return false;
   for (i = str.begin(); i < (str.end() - 1); i++)
     for (j = i + 1; j < str.end(); j++)
       if (*i == *j) return false;
@@ -28,8 +32,9 @@ bool all_unique2(string& str) {
 }
 
 bool all_unique3(string& str_) {
-  int char_map[256] = { 0 };
+  int char_map[MAX_CHARS] = { 0 };
   const char *str = str_.c_str();
+  if (strlen(str) > MAX_CHARS) return false;
   for (int i = 0; i < strlen(str); i++) {
     char c = *(str + i);
     char_map[c] += 1;

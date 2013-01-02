@@ -1,0 +1,20 @@
+#!/bin/bash
+
+E_BADARGS=65
+
+if [ $# -ne 1 ]; then
+    echo "`basename $0` {file}"
+    exit $E_BADARGS
+fi
+
+
+if [ -e $1.cc ]; then
+    clang++ -std=c++0x -O0 -g $1.cc && ./a.out && rm a.out
+fi
+[ $? -ne 0 ] && exit $?
+
+if [ -e $1.java ]; then
+    JNAME=cci_${1/./_}
+    javac $1.java && java $JNAME && rm $JNAME.class
+fi
+[ $? -ne 0 ] && exit $?

@@ -9,7 +9,7 @@ fi
 
 
 if [ -e $1.cc ]; then
-    clang++ -std=c++0x -O0 -g $1.cc && ./a.out && rm a.out
+    clang++ -std=c++0x -O0 -g $1.cc -Wno-deprecated-writable-strings && ./a.out && rm a.out
 fi
 [ $? -ne 0 ] && exit $?
 

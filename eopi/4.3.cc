@@ -8,10 +8,12 @@
 
 #include "list.h"
 
-// Traverse both one-by-one hashing addresses.
+// Traverse both one-by-one hashing addresses, but this is not constant space.
 
-// Notice that if they merge, they must have the same tail
-// node.
+// O(n^2) solution where outer loop traverses L1 and inner loop traverses
+// L2 searching for a match.
+
+// Notice that if they merge, they must have the same tail node.
 
 int main(int argc, char *argv[]) {
   

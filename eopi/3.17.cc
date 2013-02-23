@@ -33,6 +33,9 @@ string rle_encode(const string& s) {
   return tmp;
 }
 
+// TODO eopi solution used stringstream.. kind of a cheat, but
+// much cleaner code!
+
 string rle_decode(const string& s) {
   string tmp;
   int n = 0;

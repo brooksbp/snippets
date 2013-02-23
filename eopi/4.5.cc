@@ -23,6 +23,8 @@ void even_odd_merge(shared_ptr<node_t<T> >& head) {
   }
 }
 
+// A bit sloppy compared to eopi solution TODO
+
 int main(int argc, char *argv[]) {
   shared_ptr<node_t<int> > h1;
   push(h1, int(6));

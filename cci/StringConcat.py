@@ -3,6 +3,8 @@
 import uuid
 from datetime import datetime
 
+# A great related article: www.python.org/doc/essays/list2str.html
+
 def joinWords(words):
     '''slow string concatenation'''
     all = ""

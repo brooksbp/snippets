@@ -6,7 +6,8 @@
 template<typename T>
 class threadsafe_queue {
  private:
-  std::mutex mut;
+  // mutex must be mutable so it can be locked in empty() and in copy ctor
+  mutable std::mutex mut;
   std::queue<T> data_queue;
   std::condition_variable data_cond;
  public:
@@ -18,6 +19,7 @@ class threadsafe_queue {
   void push(T new_value) {
     std::lock_guard<std::mutex> lk(mut);
     data_queue.push(new_value);
+    // .notify_one() just notifies one thread in case multiple are waiting
     data_cond.notify_one();
   }
   void wait_and_pop(T& value) {

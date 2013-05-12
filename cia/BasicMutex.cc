@@ -50,3 +50,20 @@ void foo() {
   x.process_data(malicious_fn);
   unprotected->do_something();
 }
+
+// Interfaces
+
+// Consider a stack class where all member functions use a mutex.
+// This is all great in the sense that only one thread can modify
+// data, but the API is a bit broken..
+//
+// stack with 1 element:
+//
+//        t1      t2
+//        s.top()
+//                s.top()
+//        s.pop()
+//                s.pop() -- boom!
+
+// Change the API to take in a reference and make these two
+// operations an atomic unit.

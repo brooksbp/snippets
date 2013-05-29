@@ -5,10 +5,10 @@ LIB_OBJS = error_functions.o get_num.o
 LIB_SOCK = inet_sockets.o
 LIB_DAEMON = become_daemon.o
 
-vpath %.c = lib/:fileio/:altio/:sockets/:daemons/:sv/
+vpath %.c = lib/:fileio/:altio/:sockets/:daemons/:sv/:inotify/
 INCLUDE = -Ilib/ -Isockets/ -Idaemons/
 
-ALL = copy seek_io t_readv large_file epoll_input id_echo epoll_sv
+ALL = copy seek_io t_readv large_file epoll_input id_echo epoll_sv demo_inotify
 all: $(ALL)
 
 copy: $(LIB_OBJS) copy.o
@@ -32,6 +32,9 @@ id_echo: $(LIB_OBJS) $(LIB_SOCK) $(LIB_DAEMON) id_echo_sv.o id_echo_cl.o
 
 epoll_sv: $(LIB_OBJS) epoll_sv.o
 	$(CC) $(LIB_OBJS) epoll_sv.o -o $@
+
+demo_inotify: $(LIB_OBJS) demo_inotify.o
+	$(CC) $(LIB_OBJS) demo_inotify.o -o $@
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $<

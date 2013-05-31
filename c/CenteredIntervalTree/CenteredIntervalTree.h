@@ -42,14 +42,13 @@ struct CenteredIntervalTree {
     for (auto it = intervals.begin(); it != intervals.end(); it++) {
       if (it->first < node->x_center && it->second < node->x_center) {
         S_left.push_back(*it);
-      } else if (it->first <= node->x_center && it->second <= node->x_center) {
+      } else if (it->first <= node->x_center && it->second >= node->x_center) {
         S_center.push_back(*it);
       } else if (it->first > node->x_center) {
         S_right.push_back(*it);
       }
     }
     if (S_center.size() > 0) {
-      std::sort(S_center.begin(), S_center.end());
       node->start = S_center;
       std::sort(S_center.begin(), S_center.end(), sort_second());
       node->end = S_center;
@@ -67,8 +66,31 @@ struct CenteredIntervalTree {
     construct_(intervals, root);
   }
 
-  void printCenter() {
-    std::cout << "center: " << root->x_center << std::endl;
+  bool query_point_(int p, std::shared_ptr<struct node> node) {
+    if (node == nullptr) return false;
+    if (p == node->x_center) return (node->start.size() > 0);
+    for (auto it = node->start.begin(); it != node->start.end(); it++) {
+      if (it->first <= p && it->second >= p) return true;
+    }
+    return query_point_(p, (p < node->x_center)? node->left : node->right);
+  }
+  bool query_point(int p) {
+    return query_point_(p, root);
+  }
+  
+  bool query_interval_(int x1, int x2, std::shared_ptr<struct node> node) {
+    if (node == nullptr) return false;
+    if (x1 <= node->x_center && x2 >= node->x_center) {
+      if (node->start.size() > 0) return true;
+    }
+    if (x2 < node->x_center) {
+      return query_interval_(x1, x2, node->left);
+    } else if (x1 > node->x_center) {
+      return query_interval_(x1, x2, node->right);
+    }
+  }
+  bool query_interval(int x1, int x2) {
+    return query_interval_(x1, x2, root);
   }
 };
 

@@ -11,53 +11,64 @@ using namespace std;
 
 #define MAX_CHARS 256   // 8-bit ASCII
 
-bool all_unique(string& str) {
+// Hash every character detecting duplicates along the way..
+bool s1(string& str) {
+  if (str.length() > MAX_CHARS) {
+    return false;
+  }
   unordered_map<char,int> char_map;
-  string::iterator i;
-  if (str.length() > MAX_CHARS) return false;
-  for (i = str.begin(); i < str.end(); i++) {
+  for (string::iterator i = str.begin(); i < str.end(); i++) {
     char_map[*i] += 1;
-    if (char_map[*i] > 1) return false;
+    if (char_map[*i] > 1) {
+      return false;
+    }
   }
   return true;
 }
 
-bool all_unique2(string& str) {
-  string::iterator i, j;
-  if (str.length() > MAX_CHARS) return false;
-  for (i = str.begin(); i < (str.end() - 1); i++)
-    for (j = i + 1; j < str.end(); j++)
+// For each character, see if it exists it the remaining part of string..
+bool s2(string& str) {
+  if (str.length() > MAX_CHARS) {
+    return false;
+  }
+  for (string::iterator i = str.begin(); i < (str.end() - 1); i++)
+    for (string::iterator j = i + 1; j < str.end(); j++)
       if (*i == *j) return false;
   return true;
 }
 
-bool all_unique3(string& str_) {
+// C version of s1 with an array used as hash tbl
+bool s3(string& str_) {
+  const char *str = str_.c_str();  
+  if (strlen(str) > MAX_CHARS) {
+    return false;
+  }
   int char_map[MAX_CHARS] = { 0 };
-  const char *str = str_.c_str();
-  if (strlen(str) > MAX_CHARS) return false;
   for (int i = 0; i < strlen(str); i++) {
     char c = *(str + i);
     char_map[c] += 1;
-    if (char_map[c] > 1) return false;
+    if (char_map[c] > 1) {
+      return false;
+    }
   }
   return true;
 }
 
 int main(int argc, char *argv[]) {
-  string s1("a uniq-str");
-  string s2("another");
-  string empty("");
-  string sc = s1 + s2 + empty;
+  string str1("a uniq-str");
+  string str2("another");
+  string str3("");
+  string str4 = str1 + str2 + str3;
 
-#define RUN_ASSERTS(fn) do { \
-    assert(fn(s1));          \
-    assert(fn(s2));          \
-    assert(fn(empty));       \
-    assert(!fn(sc));         \
+#define GO(fn) do {            \
+    assert(fn(str1));          \
+    assert(fn(str2));          \
+    assert(fn(str3));          \
+    assert(!fn(str4));         \
   } while (0)
 
-  RUN_ASSERTS(all_unique);
-  RUN_ASSERTS(all_unique2);
-  RUN_ASSERTS(all_unique3);
+  GO(s1);
+  GO(s2);
+  GO(s3);
   return 0;
 }

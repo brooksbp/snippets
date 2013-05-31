@@ -12,6 +12,7 @@ using namespace std;
 #define MAX_CHARS 256   // 8-bit ASCII
 
 // Hash every character detecting duplicates along the way..
+// O(n), O(1) space
 bool s1(string& str) {
   if (str.length() > MAX_CHARS) {
     return false;
@@ -27,6 +28,7 @@ bool s1(string& str) {
 }
 
 // For each character, see if it exists it the remaining part of string..
+// O(n^2), O(1) space
 bool s2(string& str) {
   if (str.length() > MAX_CHARS) {
     return false;
@@ -38,6 +40,7 @@ bool s2(string& str) {
 }
 
 // C version of s1 with an array used as hash tbl
+// O(n), O(1) space
 bool s3(string& str_) {
   const char *str = str_.c_str();  
   if (strlen(str) > MAX_CHARS) {
@@ -53,6 +56,11 @@ bool s3(string& str_) {
   }
   return true;
 }
+
+// Could also sort the string O(nlogn) and search for duplicates O(n),
+// O(nlogn) + O(n) => O(n)..
+
+// Could also use a bit vector instead of array to save space.
 
 int main(int argc, char *argv[]) {
   string str1("a uniq-str");

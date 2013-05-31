@@ -1,0 +1,8 @@
+String s;
+s.length();
+for (string::iterator i = str.begin(); i < str.end(); i++) cout << *i;
+const char* cstr = s.c_str();
+
+unordered_map<KeyT,ValueT> map;
+map[key] = value;
+

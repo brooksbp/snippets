@@ -42,15 +42,21 @@ def corr(a, b):
 
 def main():
     symbols = [
-        'VYM', 'MGV', 'VTV', 'VIG', 'VV',
-        'MGC', 'VOO', 'VTI', 'VUG', 'MGK',
-        'VOE', 'VXF', 'VO', 'VBR', 'VB',
-        'VBK',
-        'VCR', 'VDC', 'VDE', 'VFH', 'VHT',
-        'VIS', 'VGT', 'VAW', 'VNQ', 'VOX',
-        'VPU',
-        'VEU', 'VSS', 'VEA', 'VWO', 'VGK',
-        'VPL', 'VNQI', 'VXUS', 'VT'
+        # 'VYM', 'MGV', 'VTV', 'VIG', 'VV',
+        # 'MGC', 'VOO', 'VTI', 'VUG', 'MGK',
+        # 'VOE', 'VXF', 'VO', 'VBR', 'VB',
+        # 'VBK',
+        # 'VCR', 'VDC', 'VDE', 'VFH', 'VHT',
+        # 'VIS', 'VGT', 'VAW', 'VNQ', 'VOX',
+        # 'VPU',
+        # 'VEU', 'VSS', 'VEA', 'VWO', 'VGK',
+        # 'VPL', 'VNQI', 'VXUS', 'VT'
+        'SPY', 'IVV', 'EFA', 'QQQ', 'VTI',
+        'VWO', 'GLD', 'IWM', 'EEM', 'IWF',
+        'VIG', 'IWD', 'IJH', 'VNQ', 'VEA',
+        'BND', 'XLF', 'VOO', 'LQD', 'AGG',
+        'MDY', 'VGK', 'IJR', 'VUG', 'BSV',
+        'EWJ',
     ]
 
     ETFs = [HistData(x) for x in symbols]

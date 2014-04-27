@@ -1,6 +1,16 @@
-*.o
 .DS_Store*
 .~*
+
+*.o
+
+*.ko
+*.mod.c
+*.mod.o
+*.order
+*.symvers
+.*.cmd
+.tmp_versions/*
+
 a.out
 
 *.hi

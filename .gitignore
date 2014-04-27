@@ -9,7 +9,7 @@
 *.order
 *.symvers
 .*.cmd
-.tmp_versions/*
+.tmp_versions*
 
 a.out
 

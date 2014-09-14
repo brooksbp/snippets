@@ -51,18 +51,21 @@ def main():
         # 'VPU',
         # 'VEU', 'VSS', 'VEA', 'VWO', 'VGK',
         # 'VPL', 'VNQI', 'VXUS', 'VT'
-        'SPY', 'IVV', 'EFA', 'QQQ', 'VTI',
-        'VWO', 'GLD', 'IWM', 'EEM', 'IWF',
-        'VIG', 'IWD', 'IJH', 'VNQ', 'VEA',
-        'BND', 'XLF', 'VOO', 'LQD', 'AGG',
-        'MDY', 'VGK', 'IJR', 'VUG', 'BSV',
-        'EWJ',
+
+        # 'SPY', 'IVV', 'EFA', 'QQQ', 'VTI',
+        # 'VWO', 'GLD', 'IWM', 'EEM', 'IWF',
+        # 'VIG', 'IWD', 'IJH', 'VNQ', 'VEA',
+        # 'BND', 'XLF', 'VOO', 'LQD', 'AGG',
+        # 'MDY', 'VGK', 'IJR', 'VUG', 'BSV',
+        # 'EWJ',
+
+        'SPY', 'IDV',
     ]
 
     ETFs = [HistData(x) for x in symbols]
 
-    start = '2012-06-07'
-    end   = '2013-06-07'
+    start = '2008-06-07'
+    end   = '2014-07-07'
     for e in ETFs:
         e.setRange(start, end)
 

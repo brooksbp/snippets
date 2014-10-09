@@ -30,11 +30,10 @@ vector<Point> convex_hull(vector<Point> P) {
   }
 
   // .........................
-  
+
   return ch;
 }
 
 int main(int argc, char *argv[]) {
-  
   return 0;
 }

@@ -1,5 +1,3 @@
-// sqrt.v
-
 module sqrt32(clk, rdy, reset, x, .y(acc));
    input         clk;
    output        rdy;

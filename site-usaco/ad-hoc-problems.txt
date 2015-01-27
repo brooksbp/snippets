@@ -1,0 +1,9 @@
+`ad hoc' problems are those whose algorithms do not fall into standard
+categories with well-studied solutions.
+
+The solutions might require a novel data structure or an unusual set of
+loops or conditionals.
+
+Ad hoc problems can still require reasonable optimizations and at least a
+degree of analysis that enables on eto avoid loops nested five deep, for
+example.

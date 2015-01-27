@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "./make_template <dir-name> <prob-name>"
+    exit 0
+fi
+
+if [ -d "$1" ]; then
+    echo "directory '$1' already exists."
+    exit 0
+fi
+
+mkdir $1
+
+cat <<EOF > $1/main.cc
+/*
+ID: brooks.1
+PROG: $2
+LANG: C++11
+*/
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+  ifstream fin("$2.in");
+  ofstream fout("$2.out");
+
+  
+
+  return 0;
+}
+EOF

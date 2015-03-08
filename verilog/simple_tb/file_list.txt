@@ -1,0 +1,2 @@
+DeviceRegsWithFunction.v
+Testbench_top.v

@@ -1,0 +1,591 @@
+	.file	"atomics_builtin.c"
+	.text
+	.globl	fence_RELAXED
+	.type	fence_RELAXED, @function
+fence_RELAXED:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	fence_RELAXED, .-fence_RELAXED
+	.globl	fence_CONSUME
+	.type	fence_CONSUME, @function
+fence_CONSUME:
+.LFB1:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE1:
+	.size	fence_CONSUME, .-fence_CONSUME
+	.globl	fence_ACQUIRE
+	.type	fence_ACQUIRE, @function
+fence_ACQUIRE:
+.LFB2:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE2:
+	.size	fence_ACQUIRE, .-fence_ACQUIRE
+	.globl	fence_RELEASE
+	.type	fence_RELEASE, @function
+fence_RELEASE:
+.LFB3:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE3:
+	.size	fence_RELEASE, .-fence_RELEASE
+	.globl	fence_ACQ_REL
+	.type	fence_ACQ_REL, @function
+fence_ACQ_REL:
+.LFB4:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE4:
+	.size	fence_ACQ_REL, .-fence_ACQ_REL
+	.globl	fence_SEQ_CST
+	.type	fence_SEQ_CST, @function
+fence_SEQ_CST:
+.LFB5:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	mfence
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE5:
+	.size	fence_SEQ_CST, .-fence_SEQ_CST
+	.local	u64
+	.comm	u64,8,8
+	.globl	load_RELAXED
+	.type	load_RELAXED, @function
+load_RELAXED:
+.LFB6:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	-8(%rbp), %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE6:
+	.size	load_RELAXED, .-load_RELAXED
+	.globl	load_CONSUME
+	.type	load_CONSUME, @function
+load_CONSUME:
+.LFB7:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	-8(%rbp), %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE7:
+	.size	load_CONSUME, .-load_CONSUME
+	.globl	load_ACQUIRE
+	.type	load_ACQUIRE, @function
+load_ACQUIRE:
+.LFB8:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	-8(%rbp), %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8:
+	.size	load_ACQUIRE, .-load_ACQUIRE
+	.globl	load_SEQ_CST
+	.type	load_SEQ_CST, @function
+load_SEQ_CST:
+.LFB9:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	-8(%rbp), %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE9:
+	.size	load_SEQ_CST, .-load_SEQ_CST
+	.globl	store_RELAXED
+	.type	store_RELAXED, @function
+store_RELAXED:
+.LFB10:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$64, %eax
+	movq	%rax, u64(%rip)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE10:
+	.size	store_RELAXED, .-store_RELAXED
+	.globl	store_RELEASE
+	.type	store_RELEASE, @function
+store_RELEASE:
+.LFB11:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$64, %eax
+	movq	%rax, u64(%rip)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE11:
+	.size	store_RELEASE, .-store_RELEASE
+	.globl	store_SEQ_CST
+	.type	store_SEQ_CST, @function
+store_SEQ_CST:
+.LFB12:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$64, %eax
+	movq	%rax, u64(%rip)
+	mfence
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE12:
+	.size	store_SEQ_CST, .-store_SEQ_CST
+	.globl	add_fetch_RELAXED
+	.type	add_fetch_RELAXED, @function
+add_fetch_RELAXED:
+.LFB13:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$1, %eax
+	lock xaddq	%rax, u64(%rip)
+	addq	$1, %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE13:
+	.size	add_fetch_RELAXED, .-add_fetch_RELAXED
+	.globl	add_fetch_CONSUME
+	.type	add_fetch_CONSUME, @function
+add_fetch_CONSUME:
+.LFB14:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$1, %eax
+	lock xaddq	%rax, u64(%rip)
+	addq	$1, %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE14:
+	.size	add_fetch_CONSUME, .-add_fetch_CONSUME
+	.globl	add_fetch_ACQUIRE
+	.type	add_fetch_ACQUIRE, @function
+add_fetch_ACQUIRE:
+.LFB15:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$1, %eax
+	lock xaddq	%rax, u64(%rip)
+	addq	$1, %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE15:
+	.size	add_fetch_ACQUIRE, .-add_fetch_ACQUIRE
+	.globl	add_fetch_RELEASE
+	.type	add_fetch_RELEASE, @function
+add_fetch_RELEASE:
+.LFB16:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$1, %eax
+	lock xaddq	%rax, u64(%rip)
+	addq	$1, %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE16:
+	.size	add_fetch_RELEASE, .-add_fetch_RELEASE
+	.globl	add_fetch_ACQ_REL
+	.type	add_fetch_ACQ_REL, @function
+add_fetch_ACQ_REL:
+.LFB17:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$1, %eax
+	lock xaddq	%rax, u64(%rip)
+	addq	$1, %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE17:
+	.size	add_fetch_ACQ_REL, .-add_fetch_ACQ_REL
+	.globl	add_fetch_SEQ_CST
+	.type	add_fetch_SEQ_CST, @function
+add_fetch_SEQ_CST:
+.LFB18:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$1, %eax
+	lock xaddq	%rax, u64(%rip)
+	addq	$1, %rax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE18:
+	.size	add_fetch_SEQ_CST, .-add_fetch_SEQ_CST
+	.globl	cmp_xchg_RELAXED
+	.type	cmp_xchg_RELAXED, @function
+cmp_xchg_RELAXED:
+.LFB19:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	$0, -8(%rbp)
+	leaq	-8(%rbp), %rdx
+	movq	(%rdx), %rax
+	movl	$1, %ecx
+	lock cmpxchgq	%rcx, u64(%rip)
+	movq	%rax, %rcx
+	sete	%al
+	testb	%al, %al
+	jne	.L21
+	movq	%rcx, (%rdx)
+.L21:
+	movzbl	%al, %eax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE19:
+	.size	cmp_xchg_RELAXED, .-cmp_xchg_RELAXED
+	.globl	cmp_xchg_CONSUME
+	.type	cmp_xchg_CONSUME, @function
+cmp_xchg_CONSUME:
+.LFB20:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	$0, -8(%rbp)
+	leaq	-8(%rbp), %rdx
+	movq	(%rdx), %rax
+	movl	$1, %ecx
+	lock cmpxchgq	%rcx, u64(%rip)
+	movq	%rax, %rcx
+	sete	%al
+	testb	%al, %al
+	jne	.L23
+	movq	%rcx, (%rdx)
+.L23:
+	movzbl	%al, %eax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE20:
+	.size	cmp_xchg_CONSUME, .-cmp_xchg_CONSUME
+	.globl	cmp_xchg_ACQUIRE
+	.type	cmp_xchg_ACQUIRE, @function
+cmp_xchg_ACQUIRE:
+.LFB21:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	$0, -8(%rbp)
+	leaq	-8(%rbp), %rdx
+	movq	(%rdx), %rax
+	movl	$1, %ecx
+	lock cmpxchgq	%rcx, u64(%rip)
+	movq	%rax, %rcx
+	sete	%al
+	testb	%al, %al
+	jne	.L25
+	movq	%rcx, (%rdx)
+.L25:
+	movzbl	%al, %eax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE21:
+	.size	cmp_xchg_ACQUIRE, .-cmp_xchg_ACQUIRE
+	.globl	cmp_xchg_RELEASE
+	.type	cmp_xchg_RELEASE, @function
+cmp_xchg_RELEASE:
+.LFB22:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	$0, -8(%rbp)
+	leaq	-8(%rbp), %rdx
+	movq	(%rdx), %rax
+	movl	$1, %ecx
+	lock cmpxchgq	%rcx, u64(%rip)
+	movq	%rax, %rcx
+	sete	%al
+	testb	%al, %al
+	jne	.L27
+	movq	%rcx, (%rdx)
+.L27:
+	movzbl	%al, %eax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE22:
+	.size	cmp_xchg_RELEASE, .-cmp_xchg_RELEASE
+	.globl	cmp_xchg_ACQ_REL
+	.type	cmp_xchg_ACQ_REL, @function
+cmp_xchg_ACQ_REL:
+.LFB23:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	$0, -8(%rbp)
+	leaq	-8(%rbp), %rdx
+	movq	(%rdx), %rax
+	movl	$1, %ecx
+	lock cmpxchgq	%rcx, u64(%rip)
+	movq	%rax, %rcx
+	sete	%al
+	testb	%al, %al
+	jne	.L29
+	movq	%rcx, (%rdx)
+.L29:
+	movzbl	%al, %eax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE23:
+	.size	cmp_xchg_ACQ_REL, .-cmp_xchg_ACQ_REL
+	.globl	cmp_xchg_SEQ_CST
+	.type	cmp_xchg_SEQ_CST, @function
+cmp_xchg_SEQ_CST:
+.LFB24:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	$0, -8(%rbp)
+	leaq	-8(%rbp), %rdx
+	movq	(%rdx), %rax
+	movl	$1, %ecx
+	lock cmpxchgq	%rcx, u64(%rip)
+	movq	%rax, %rcx
+	sete	%al
+	testb	%al, %al
+	jne	.L31
+	movq	%rcx, (%rdx)
+.L31:
+	movzbl	%al, %eax
+	movq	%rax, -8(%rbp)
+	nop
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE24:
+	.size	cmp_xchg_SEQ_CST, .-cmp_xchg_SEQ_CST
+	.globl	main
+	.type	main, @function
+main:
+.LFB25:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	call	fence_RELAXED
+	call	fence_CONSUME
+	call	fence_ACQUIRE
+	call	fence_RELEASE
+	call	fence_ACQ_REL
+	call	fence_SEQ_CST
+	call	load_RELAXED
+	call	load_CONSUME
+	call	load_ACQUIRE
+	call	load_SEQ_CST
+	call	store_RELAXED
+	call	store_RELEASE
+	call	store_SEQ_CST
+	call	add_fetch_RELAXED
+	call	add_fetch_CONSUME
+	call	add_fetch_ACQUIRE
+	call	add_fetch_RELEASE
+	call	add_fetch_ACQ_REL
+	call	add_fetch_SEQ_CST
+	call	cmp_xchg_RELAXED
+	call	cmp_xchg_CONSUME
+	call	cmp_xchg_ACQUIRE
+	call	cmp_xchg_RELEASE
+	call	cmp_xchg_ACQ_REL
+	call	cmp_xchg_SEQ_CST
+	movl	$0, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE25:
+	.size	main, .-main
+	.ident	"GCC: (GNU) 6.2.1 20160830"
+	.section	.note.GNU-stack,"",@progbits
